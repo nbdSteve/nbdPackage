@@ -1,0 +1,1855 @@
+# Configuration file for nbdPackage v1.0
+
+# Made with a keyboard and computer
+# Report bugs / problems to me on discord! 
+# https://discord.gg/j6Yj5B8
+# -nbdSteve
+
+# --------------------------------------------------------------------------------------
+# 
+# Start configuration for misc. parts of the plugin.
+#
+# GUI configuration, this is the gui that is open with /ce.
+# Name of the enchanter GUI
+EnchanterName: '&f&lSERVER ENCHANTER'
+#
+# Size of the enchanter GUI, this must be a multiple of 9.
+EnchanterSize: 54
+#
+# If the plugin should hook into world guard regions.
+WorldGuard: true
+#
+# If the plugin should hook into savage factions for relationships.
+SavageFactions: true
+#
+# The slots for filler glass, glass type 1 is dark gray.
+# If you only want to use some of the glass set it to a value that
+# is the same as another piece of glass, so they have the same slot.
+# This is shown in the default configuration for Glass2.
+FillerGlass1Enabled: true
+FillerGlass1GUISlot1: 53
+FillerGlass1GUISlot2: 53
+FillerGlass1GUISlot3: 53
+FillerGlass1GUISlot4: 53
+FillerGlass1GUISlot5: 4 
+FillerGlass1GUISlot6: 5
+FillerGlass1GUISlot7: 6
+FillerGlass1GUISlot8: 7
+FillerGlass1GUISlot9: 8
+FillerGlass1GUISlot10: 53
+FillerGlass1GUISlot11: 53
+FillerGlass1GUISlot12: 53
+FillerGlass1GUISlot13: 48
+FillerGlass1GUISlot14: 49
+FillerGlass1GUISlot15: 50
+FillerGlass1GUISlot16: 51
+FillerGlass1GUISlot17: 52
+FillerGlass1GUISlot18: 53
+#
+# The slots for filler glass, glass type 2 is black.
+FillerGlass2Enabled: true
+FillerGlass2GUISlot1: 13
+FillerGlass2GUISlot2: 13
+FillerGlass2GUISlot3: 13
+FillerGlass2GUISlot4: 13
+FillerGlass2GUISlot5: 13
+FillerGlass2GUISlot6: 22
+FillerGlass2GUISlot7: 22
+FillerGlass2GUISlot8: 22
+FillerGlass2GUISlot9: 22
+FillerGlass2GUISlot10: 22
+FillerGlass2GUISlot11: 22
+FillerGlass2GUISlot12: 22
+FillerGlass2GUISlot13: 22
+FillerGlass2GUISlot14: 22
+FillerGlass2GUISlot15: 22
+FillerGlass2GUISlot16: 22
+FillerGlass2GUISlot17: 22
+FillerGlass2GUISlot18: 22
+#
+# Message for reloading this configuration (requires nbdpackage.admin).
+ReloadMessage: '&b&lnbd&f&lPackage &b> &7You &a&l&nSUCCESSFULLY&7 reloaded the configuration.'
+#
+# Message sent if the player doesnt have permission
+NoPermissionMessage: '&b&lnbd&f&lPackage &b> &7You &c&l&nDO NOT&7 have permission to do that.'
+#
+# Messages sent to the target with commands.
+TargetMessageEnabled: true
+TargetMessage: '&b&lnbd&f&lPackage &b> &7You were &a&l&nGIVEN&7 an item from &f%sender%&7.'
+#
+# Message for errors.
+InsufficientMessage: '&c&l&nERROR!&7 You do not have sufficient funds to purchase that.'
+InsufficientXPMessage: '&c&l&nERROR!&7 You do not have sufficient XP to purchase that.'
+FullInventoryMessage: '&c&l&nERROR!&7 Your inventory is full.'
+#
+# Sound for when an enchantment is successfully applied.
+EnchantApplySound: LEVEL_UP
+EnchantApplyVolume: 1
+EnchantApplyPitch: 3
+#
+# Sound for when a book is successfully upgraded.
+UpgradeSound: ANVIL_USE
+UpgradeVolume: 1
+UpgradePitch: 2
+# Message sent to the player when their book(s) are successfully upgraded.
+UpgradeMessage: '&a&l&nSUCCESS!&7 You upgraded your book(s).'
+#
+# If their book stack is not even this will be sent to the player.
+FailedUpgradeSound: FIREWORK_BLAST
+FailedUpgradeVolume: 1
+FailedUpgradePitch: 0
+# Message sent to the player when their book(s) are stacked oddly.
+FailedUpgradeMessage: '&c&l&nERROR!&7 You can only upgrade books that are stacked evenly!'
+#
+# End configuration of msc. parts of the plugin.
+#
+# --------------------------------------------------------------------------------------
+
+# --------------------------------------------------------------------------------------
+#
+# Start configuration for the first custom armor set.
+# 
+ArmorSet1:
+  #
+  # The amount of extra damage the player is going to do, their damage will be
+  # multiplied by this number. so it is dmg * 1.10 (or 10% extra damage). Set to 1.00
+  # to disable bonus damage, to reduce damage dealt set this to below 1.00.
+  IncreasedDamageMod: 1.10
+  #
+  # The amount that incoming damage is going to be reduced for the player. Incoming damage is
+  # multiplied by this number. So it is incomingDmg * 1.00 (or 0% damage sheild).
+  ReducedDamageMod: 1.00
+  #
+  # The price to buy the armor piece from the GUI
+  Price: 15000000.00
+  #
+  # If the armor set is enabled
+  Enabled: true
+  #
+  # The slots for each piece of armor in the GUI
+  HelmetSlotInGUI: 9
+  ChestplateSlotInGUI: 10
+  LeggingsSlotInGUI: 11
+  BootsSlotInGUI: 12
+  #
+  # The armor pieces UNIQUE name, this is the second line of lore, MAKE SURE THIS IS UNIQUE!
+  UniqueName: "&f&l*** &c&lPARADOX SET BONUS &f&l***"
+  # 
+  # The addtional lines of lore, these will go directly after the UniqueName
+  Lore:
+  - "&c&l» &c&l+10%&c damage to &lALL&c enemies"
+  - "&7&o(Requires all 4 paradox items to activate)"
+  - "&7 "
+  #
+  # Lore for the item in the GUI, this is to add the price to it.
+  GUILore:
+  - "&7&m-----------------------------------"
+  - "&2&l * &a&lBUY PRICE &f> &a$15,000,000"
+  - "&7&l * &7&oclick to purchase"
+  - "&7&m-----------------------------------" 
+  #
+  # The chance for the armor set to work and block / add dmg. Set this to 1 for 100%.
+  ProcChance: 5
+  #
+  # The message sent to the player when they are wearing a fullset of armor
+  ActivatedMessage: 
+  - "&7 "
+  - "&f&l*** &c&lPARADOX SET BONUS ACTIVE &f&l***"
+  - "&c&l» &c&l+10%&c damage to &lALL&c enemies"
+  - "&7 "
+  #
+  # Message sent to the player when the offensive armor set works.
+  IncreasedProcMessageEnabled: true
+  IncreasedProcMessage: "&f&l*** &c&lPARADOX BONUS +10%&c damage &f&l***"
+  #
+  # The sound played to the player when the offensive armor set works
+  IncreasedProcSoundEnabled: true
+  IncreasedProcSound: DRINK
+  IncreasedProcVolume: 1
+  IncreasedProcPitch: 4
+  #
+  # Message sent to the player when the defensive armor set works.
+  ReducedProcMessageEnabled: false
+  ReducedProcMessage: "&7 "
+  #
+  # The sound played to the player when the defensive armor set works
+  ReducedProcSoundEnabled: false
+  ReducedProcSound: BAT_TAKEOFF
+  ReducedProcVolume: 1
+  ReducedProcPitch: 0
+#
+# End configuration for the first custom armor set.
+#
+# -------------------------------------------------------------------------------------- 
+
+# --------------------------------------------------------------------------------------
+#
+# Start configuration for the second custom armor set.
+# 
+ArmorSet2:
+  #
+  IncreasedDamageMod: 1.05
+  #
+  ReducedDamageMod: 0.95
+  #
+  Price: 15000000.00
+  #
+  Enabled: true
+  #
+  HelmetSlotInGUI: 14
+  ChestplateSlotInGUI: 15
+  LeggingsSlotInGUI: 16
+  BootsSlotInGUI: 17
+  #
+  UniqueName: "&f&l*** &b&lPLASMA SET BONUS &f&l***"
+  Lore:
+  - "&b&l» +5%&b damage to &lALL&b enemies"
+  - "&b&l» -5%&b damage to you from &lALL&b enemies"
+  - "&7&o(Requires all 4 plasma items to activate)"
+  - "&7 "
+  #
+  GUILore:
+  - "&7&m-----------------------------------"
+  - "&2&l * &a&lBUY PRICE &f> &a$15,000,000"
+  - "&7&l * &7&oclick to purchase"
+  - "&7&m-----------------------------------" 
+  #
+  ProcChance: 3
+  #
+  ActivatedMessage: 
+  - "&7 "
+  - "&f&l*** &b&lPLASMA SET BONUS ACTIVE &f&l***"
+  - "&b&l» +5%&b damage to &lALL&b enemies"
+  - "&b&l» -5%&b damage to you from &lALL&b enemies"
+  - "&7 "
+  #
+  IncreasedProcMessageEnabled: false
+  IncreasedProcMessage: "&f&l*** &b&lPLASMODIUM BONUS +5%&b damage &f&l***"
+  #
+  IncreasedProcSoundEnabled: true
+  IncreasedProcSound: WITHER_SHOOT
+  IncreasedProcVolume: 1
+  IncreasedProcPitch: 0
+  #
+  ReducedProcMessageEnabled: false
+  ReducedProcMessage: "&f&l*** &b&lPLASMODIUM BONUS -5%&b damage to you &f&l***"
+  #
+  ReducedProcSoundEnabled: true
+  ReducedProcSound: FIREWORK_BLAST
+  ReducedProcVolume: 1
+  ReducedProcPitch: 0
+#
+# End configuration for the second custom armor set.
+#
+# -------------------------------------------------------------------------------------- 
+
+# --------------------------------------------------------------------------------------
+#
+# Start configuration for the third custom armor set.
+# 
+ArmorSet3:
+  #
+  IncreasedDamageMod: 1.00
+  #
+  ReducedDamageMod: 0.85
+  #
+  Price: 15000000.00
+  #
+  Enabled: true
+  #
+  HelmetSlotInGUI: 18
+  ChestplateSlotInGUI: 19
+  LeggingsSlotInGUI: 20
+  BootsSlotInGUI: 21
+  #
+  UniqueName: "&f&l*** &5&lDIABLO SET BONUS &f&l***"
+  Lore:
+  - "&5&l» -15%&5 damage to you from &lALL&5 enemies"
+  - "&7&o(Requires all 4 diablo items to activate)"
+  - "&7 "
+  #
+  GUILore:
+  - "&7&m-----------------------------------"
+  - "&2&l * &a&lBUY PRICE &f> &a$15,000,000"
+  - "&7&l * &7&oclick to purchase"
+  - "&7&m-----------------------------------" 
+  #
+  ProcChance: 4
+  #
+  ActivatedMessage: 
+  - "&7 "
+  - "&f&l*** &5&lDIABLO SET BONUS ACTIVE &f&l***"
+  - "&5&l» -15%&5 damage to you from &lALL&5 enemies"
+  - "&7 "
+  #
+  IncreasedProcMessageEnabled: false
+  IncreasedProcMessage: "&f "
+  #
+  IncreasedProcSoundEnabled: false
+  IncreasedProcSound: SUCCESSFUL_HIT
+  IncreasedProcVolume: 1
+  IncreasedProcPitch: 0
+  #
+  ReducedProcMessageEnabled: false
+  ReducedProcMessage: "&f&l*** &5&lDIABLO BONUS -15%&5 damage to you &f&l***"
+  #
+  ReducedProcSoundEnabled: true
+  ReducedProcSound: PORTAL_TRIGGER
+  ReducedProcVolume: 1
+  ReducedProcPitch: 4
+#
+# End configuration for the third custom armor set.
+#
+# --------------------------------------------------------------------------------------
+
+# --------------------------------------------------------------------------------------
+#
+# Start configuration for the third custom armor set.
+# 
+ArmorSet4:
+  #
+  IncreasedDamageMod: 1.25
+  #
+  ReducedDamageMod: 1.00
+  #
+  Price: 25000000.00
+  #
+  Enabled: true
+  #
+  HelmetSlotInGUI: 23
+  ChestplateSlotInGUI: 24
+  LeggingsSlotInGUI: 25
+  BootsSlotInGUI: 26
+  #
+  UniqueName: "&f&l*** &6&lASTRO SET BONUS &f&l***"
+  Lore:
+  - "&6&l» +25%&6 damage to you from &lALL&6 enemies"
+  - "&7&o(Requires all 4 astro items to activate)"
+  - "&7 "
+  #
+  GUILore:
+  - "&7&m-----------------------------------"
+  - "&2&l * &a&lBUY PRICE &f> &a$25,000,000"
+  - "&7&l * &7&oclick to purchase"
+  - "&7&m-----------------------------------" 
+  #
+  ProcChance: 4
+  #
+  ActivatedMessage: 
+  - "&7 "
+  - "&f&l*** &6&lASTRO SET BONUS ACTIVE &f&l***"
+  - "&6&l» +25%&6 damage to you from &lALL&6 enemies"
+  - "&7 "
+  #
+  IncreasedProcMessageEnabled: true
+  IncreasedProcMessage: "&f&l*** &6&lASTRO BONUS +25%&6 damage &f&l***"
+  #
+  IncreasedProcSoundEnabled: true
+  IncreasedProcSound: SILVERFISH_HIT
+  IncreasedProcVolume: 1
+  IncreasedProcPitch: 0
+  #
+  ReducedProcMessageEnabled: false
+  ReducedProcMessage: "&f "
+  #
+  ReducedProcSoundEnabled: false
+  ReducedProcSound: PORTAL_TRIGGER
+  ReducedProcVolume: 1
+  ReducedProcPitch: 4
+#
+# End configuration for the fourth custom armor set.
+#
+# --------------------------------------------------------------------------------------
+
+# --------------------------------------------------------------------------------------
+#
+# Start configuration for the fifth custom armor set.
+# 
+ArmorSet5:
+  #
+  Price: 25000000.00
+  #
+  Enabled: true
+  #
+  HelmetSlotInGUI: 0
+  ChestplateSlotInGUI: 1
+  LeggingsSlotInGUI: 2
+  BootsSlotInGUI: 3
+  #
+  PlayerDistance: 24
+  EffectLength: 400
+  PotionLevel: 0
+  #
+  UniqueName: "&f&l*** &d&lBARD SET BONUS &f&l***"
+  Lore:
+  - "&d&l» &dGives nearby allies & truces regeneration"
+  - "&7&o(Requires all 4 bard items to activate)"
+  - "&7 "
+  #
+  GUILore:
+  - "&7&m-----------------------------------"
+  - "&2&l * &a&lBUY PRICE &f> &a$25,000,000"
+  - "&7&l * &7&oclick to purchase"
+  - "&7&m-----------------------------------" 
+  #
+  ActivatedMessage: 
+  - "&7 "
+  - "&f&l*** &d&lBARD SET BONUS &f&l***"
+  - "&d&l» &dGives nearby allies & truces regeneration"
+  - "&7 "
+#
+# End configuration for the fifth custom armor set.
+#
+# --------------------------------------------------------------------------------------
+
+# --------------------------------------------------------------------------------------
+#
+# Start configuration for the first custom enchantment book.
+# 
+ceBook1:
+  #
+  # The max level that can be obtained from the enchanter GUI.
+  MaxLevel: 2
+  #
+  # If the enchantment is enabled.
+  Enabled: true
+  #
+  # The enchantment books slot in the enchanter GUI.
+  SlotInGUI: 27
+  #
+  # If the player tries to apply the book to an item which already has the enchantment.
+  AlreadyEnchantedMessage: "&c&l&nERROR!&7 Your item already has the enchantment &e&lVELOCITY&7."
+  #
+  # Cost IN LEVELS required to by the book for the enchanter GUI
+  CostXP: 40
+  #
+  # BETA, this enchantment will only work for boots. (all of enchants will only work for what is specified in the default config, sorry :[ ).
+  ActiveItem: DIAMOND_BOOTS
+  #
+  # Name of the enchantment
+  Name: "&e&lVelocity"
+  #
+  # This is the lore of the book that will be shown in the enchanter GUI.
+  Lore:
+  - "&7 "
+  - "&f&l*** &6&lCOSTS 40 LEVELS &f&l***"
+  - "&7 "
+  - "&b&lDESCRIPTION &3»"
+  - "&eVelocity&7 will give you the speed potion effect, the"
+  - "&7level of speed will scale with the enchantment level."
+  - "&7The enchantment &eVelocity&7 can be applied to helmets."
+  - "&7 "
+  - "&7The enchantment &eVelocity &7has a &eMAX LEVEL&7 of &eII&7."
+  - "&7 "
+  - "&6&l&m-=-&r &e&lMYTHIC ENCHANTMENT &6&l&m-=-&r"
+  - "&7 "
+  #
+  # This is the lore of the book as a item, after the player has purchased it.
+  BookLore:
+  - "&7 "
+  - "&eVelocity&7 will give you the speed potion effect, the"
+  - "&7level of speed will scale with the enchantment level."
+  - "&7To enchant an item with &eVelocity&7, drag and drop this book"
+  - "&7onto &6BOOTS&7, the enchantment will automatically apply."
+  - "&7 "
+  - "&7The enchantment &eVelocity &7has a &eMAX LEVEL&7 of &eII&7."
+  - "&7 "
+  - "&6&l&m-=-&r &e&lMYTHIC ENCHANTMENT &6&l&m-=-&r"
+  - "&7 "
+  #
+  # Potion effect applied with this enchantment.
+  PotionEffect: "SPEED"
+  #
+  # The name of the book given to the player after purchasing it.
+  BookLevel1: "&e&lVelocity I"
+  BookLevel2: "&e&lVelocity II"
+  BookLevel3: "&e&lVelocity III"
+  BookLevel4: "&e&lVelocity IV"
+  BookLevel5: "&e&lVelocity V"
+  #
+  # The lore applied to an item when it is enchanted with the custom enchantment.
+  EnchantedLoreLevel1: "&eVelocity I"
+  EnchantedLoreLevel2: "&eVelocity II"
+  EnchantedLoreLevel3: "&eVelocity III"
+  EnchantedLoreLevel4: "&eVelocity IV"
+  EnchantedLoreLevel5: "&eVelocity V"
+#
+# End configuration for the first custom enchantment book.
+#
+# --------------------------------------------------------------------------------------
+
+# --------------------------------------------------------------------------------------
+#
+# Start configuration for the second custom enchantment book.
+# 
+ceBook2:
+  MaxLevel: 3
+  #
+  Enabled: true
+  #
+  SlotInGUI: 28
+  #
+  AlreadyEnchantedMessage: "&c&l&nERROR!&7 Your item already has the enchantment &a&lROCKET SHOES&7."
+  #
+  CostXP: 30
+  #
+  ActiveItem: DIAMOND_BOOTS
+  #
+  Name: "&a&lRocket Shoes"
+  Lore:
+  - "&7 "
+  - "&f&l*** &6&lCOSTS 30 LEVELS &f&l***"
+  - "&7 "
+  - "&b&lDESCRIPTION &3»"
+  - "&aRocket Shoes&7 will give you the jump boost potion effect,"
+  - "&7the level of jump boost will scale with the enchantment level."
+  - "&7The enchantment &aRocket Shoes&7 can be applied to helmets."
+  - "&7 "
+  - "&7The enchantment &aRocket Shoes &7has a &eMAX LEVEL&7 of &aIII&7."
+  - "&7 "
+  - "&2&l&m-=-&r &a&lSAGA ENCHANTMENT &2&l&m-=-&r"
+  - "&7 "
+  #
+  BookLore:
+  - "&7 "
+  - "&aRocket Shoes&7 will give you the jump boost potion effect,"
+  - "&7the level of jump boost will scale with the enchantment level."
+  - "&7To enchant an item with &aRocket Shoes&7, drag and drop this book"
+  - "&7onto &6BOOTS&7, the enchantment will automatically apply."
+  - "&7 "
+  - "&7The enchantment &aRocket Shoes &7has a &eMAX LEVEL&7 of &aIII&7."
+  - "&7 "
+  - "&2&l&m-=-&r &a&lSAGA ENCHANTMENT &2&l&m-=-&r"
+  - "&7 "
+  #
+  PotionEffect: "JUMP"
+  #
+  BookLevel1: "&a&lRocket Shoes I"
+  BookLevel2: "&a&lRocket Shoes II"
+  BookLevel3: "&a&lRocket Shoes III"
+  BookLevel4: "&a&lRocket Shoes IV"
+  BookLevel5: "&a&lRocket Shoes V"
+  #
+  EnchantedLoreLevel1: "&aRocket Shoes I"
+  EnchantedLoreLevel2: "&aRocket Shoes II"
+  EnchantedLoreLevel3: "&aRocket Shoes III"
+  EnchantedLoreLevel4: "&aRocket Shoes IV"
+  EnchantedLoreLevel5: "&aRocket Shoes V"
+#
+# End configuration for the second custom enchantment book.
+#
+# --------------------------------------------------------------------------------------
+
+# --------------------------------------------------------------------------------------
+#
+# Start configuration for the third custom enchantment book.
+# 
+ceBook3:
+  MaxLevel: 1
+  #
+  Enabled: true
+  #
+  SlotInGUI: 29
+  #
+  AlreadyEnchantedMessage: "&c&l&nERROR!&7 Your item already has the enchantment &a&lTESSELATE&7."
+  #
+  CostXP: 30
+  #
+  ActiveItem: DIAMOND_LEGGINGS
+  #
+  Name: "&a&lTesselate"
+  Lore:
+  - "&7 "
+  - "&f&l*** &6&lCOSTS 30 LEVELS &f&l***"
+  - "&7 "
+  - "&b&lDESCRIPTION &3»"
+  - "&aTesselate&7 will give you the fire resistance potion"
+  - "&7effect, this will prevent you from taking any fire and"
+  - "&7lava damage. All levels of the enchantment have this effect."
+  - "&7The enchantment &aTesselate&7 can be applied to helmets."
+  - "&7 "
+  - "&7The enchantment &aTesselate &7has a &eMAX LEVEL&7 of &aI&7."
+  - "&7 "
+  - "&2&l&m-=-&r &a&lSAGA ENCHANTMENT &2&l&m-=-&r"
+  - "&7 "
+  #
+  BookLore:
+  - "&7 "
+  - "&aTesselate&7 will give you the fire resistance potion"
+  - "&7effect, this will prevent you from taking any fire and"
+  - "&7lava damage. All levels of the enchantment have this effect."
+  - "&7To enchant an item with &aTesselate&7, drag and drop this book"
+  - "&7onto &6LEGGINGS&7, the enchantment will automatically apply."
+  - "&7 "
+  - "&7The enchantment &aTesselate &7has a &eMAX LEVEL&7 of &aI&7."
+  - "&7 "
+  - "&2&l&m-=-&r &a&lSAGA ENCHANTMENT &2&l&m-=-&r"
+  - "&7 "
+  #
+  PotionEffect: "FIRE_RESISTANCE"
+  #
+  BookLevel1: "&a&lTesselate I"
+  BookLevel2: "&a&lTesselate II"
+  BookLevel3: "&a&lTesselate III"
+  BookLevel4: "&a&lTesselate IV"
+  BookLevel5: "&a&lTesselate V"
+  #
+  EnchantedLoreLevel1: "&aTesselate I"
+  EnchantedLoreLevel2: "&aTesselate II"
+  EnchantedLoreLevel3: "&aTesselate III"
+  EnchantedLoreLevel4: "&aTesselate IV"
+  EnchantedLoreLevel5: "&aTesselate V"
+#
+# End configuration for the third custom enchantment book.
+#
+# --------------------------------------------------------------------------------------
+
+# --------------------------------------------------------------------------------------
+#
+# Start configuration for the fourth custom enchantment book.
+# 
+ceBook4:
+  MaxLevel: 1
+  #
+  Enabled: true
+  #
+  SlotInGUI: 30
+  #
+  AlreadyEnchantedMessage: "&c&l&nERROR!&7 Your item already has the enchantment &6&lJELLY LEGS&7."
+  #
+  CostXP: 60
+  #
+  ActiveItem: DIAMOND_LEGGINGS
+  #
+  ProcSound: BAT_TAKEOFF
+  ProcVolume: 1
+  ProcPitch: 1
+  #
+  Name: "&6&lJelly Legs"
+  Lore:
+  - "&7 "
+  - "&f&l*** &a&lCOSTS 60 LEVELS &f&l***"
+  - "&7 "
+  - "&b&lDESCRIPTION &3»"
+  - "&6Jelly Legs&7 will deny you from taking fall damage from,"
+  - "&7any height. The enchantment has a 100% Proc rate."
+  - "&7The enchantment &6Jelly Legs&7 can be applied to leggings"
+  - "&7 "
+  - "&7The enchantment &6Jelly Legs &7has a &eMAX LEVEL&7 of &6I&7."
+  - "&7 "
+  - "&e&l&m-=-&r &6&lLUNAR ENCHANTMENT &e&l&m-=-&r"
+  - "&7 "
+  #
+  BookLore:
+  - "&7 "
+  - "&6Jelly Legs&7 will deny you from taking fall damage from,"
+  - "&7any height. The enchantment has a 100% Proc rate."
+  - "&7To enchant an item with &6Jelly Legs&7, drag and drop this book"
+  - "&7onto &2LEGGINGS&7, the enchantment will automatically apply."
+  - "&7 "
+  - "&7The enchantment &6Jelly Legs &7has a &eMAX LEVEL&7 of &6I&7."
+  - "&7 "
+  - "&e&l&m-=-&r &6&lLUNAR ENCHANTMENT &e&l&m-=-&r"
+  - "&7 "
+  #
+  BookLevel1: "&6&lJelly Legs I"
+  BookLevel2: "&6&lJelly Legs II"
+  BookLevel3: "&6&lJelly Legs III"
+  BookLevel4: "&6&lJelly Legs IV"
+  BookLevel5: "&6&lJelly Legs V"
+  #
+  EnchantedLoreLevel1: "&6Jelly Legs I"
+  EnchantedLoreLevel2: "&6Jelly Legs II"
+  EnchantedLoreLevel3: "&6Jelly Legs III"
+  EnchantedLoreLevel4: "&6Jelly Legs IV"
+  EnchantedLoreLevel5: "&6Jelly Legs V"
+#
+# End configuration for the fourth custom enchantment book.
+#
+# --------------------------------------------------------------------------------------
+
+
+# --------------------------------------------------------------------------------------
+#
+# Start configuration for the fifth custom enchantment book.
+# 
+ceBook5:
+  MaxLevel: 1
+  #
+  Enabled: true
+  #
+  SlotInGUI: 31
+  #
+  AlreadyEnchantedMessage: "&c&l&nERROR!&7 Your item already has the enchantment &a&lMERMAID&7."
+  #
+  CostXP: 30
+  #
+  ActiveItem: DIAMOND_LEGGINGS
+  #
+  Name: "&a&lMermaid"
+  Lore:
+  - "&7 "
+  - "&f&l*** &6&lCOSTS 30 LEVELS &f&l***"
+  - "&7 "
+  - "&b&lDESCRIPTION &3»"
+  - "&aMermaid&7 will give you the water breathing potion"
+  - "&7effect, this will prevent you from taking any drowing"
+  - "&7damage. All levels of the enchantment have this effect."
+  - "&7The enchantment &aMermaid&7 can be applied to helmets."
+  - "&7 "
+  - "&7The enchantment &aMermaid &7has a &eMAX LEVEL&7 of &aI&7."
+  - "&7 "
+  - "&2&l&m-=-&r &a&lSAGA ENCHANTMENT &2&l&m-=-&r"
+  - "&7 "
+  #
+  BookLore:
+  - "&7 "
+  - "&aMermaid&7 will give you the water breathing potion"
+  - "&7effect, this will prevent you from taking any drowing"
+  - "&7damage. All levels of the enchantment have this effect."
+  - "&7To enchant an item with &aMermaid&7, drag and drop this book"
+  - "&7onto &6LEGGINGS&7, the enchantment will automatically apply."
+  - "&7 "
+  - "&7The enchantment &aMermaid &7has a &eMAX LEVEL&7 of &aI&7."
+  - "&7 "
+  - "&2&l&m-=-&r &a&lSAGA ENCHANTMENT &2&l&m-=-&r"
+  - "&7 "
+  #
+  PotionEffect: "WATER_BREATHING"
+  #
+  BookLevel1: "&a&lMermaid I"
+  BookLevel2: "&a&lMermaid II"
+  BookLevel3: "&a&lMermaid III"
+  BookLevel4: "&a&lMermaid IV"
+  BookLevel5: "&a&lMermaid V"
+  #
+  EnchantedLoreLevel1: "&aMermaid I"
+  EnchantedLoreLevel2: "&aMermaid II"
+  EnchantedLoreLevel3: "&aMermaid III"
+  EnchantedLoreLevel4: "&aMermaid IV"
+  EnchantedLoreLevel5: "&aMermaid V"
+#
+# End configuration for the fifth custom enchantment book.
+#
+# --------------------------------------------------------------------------------------
+
+# --------------------------------------------------------------------------------------
+#
+# Start configuration for the sixth custom enchantment book.
+# 
+ceBook6:
+  MaxLevel: 2
+  #
+  Enabled: true
+  #
+  SlotInGUI: 32
+  #
+  AlreadyEnchantedMessage: "&c&l&nERROR!&7 Your item already has the enchantment &c&lOVERLOAD&7."
+  #
+  CostXP: 50
+  #
+  ActiveItem: DIAMOND_CHESTPLATE
+  #
+  Name: "&c&lOverload"
+  Lore:
+  - "&7 "
+  - "&f&l*** &6&lCOSTS 50 LEVELS &f&l***"
+  - "&7 "
+  - "&b&lDESCRIPTION &3»"
+  - "&cOverload&7 will give you the health boost potion effect, the"
+  - "&7level of health boost will scale with the enchantment level."
+  - "&7The enchantment &cOverload&7 can be applied to chestplates."
+  - "&7 "
+  - "&7The enchantment &cOverload &7has a &eMAX LEVEL&7 of &cII&7."
+  - "&7 "
+  - "&4&l&m-=-&r &c&lPLANETARY ENCHANTMENT &4&l&m-=-&r"
+  - "&7 "
+  #
+  BookLore:
+  - "&7 "
+  - "&cOverload&7 will give you the health boost potion effect, the"
+  - "&7level of health boost will scale with the enchantment level."
+  - "&7To enchant an item with &cOverload&7, drag and drop this book"
+  - "&7onto &6CHESTPLATES&7, the enchantment will automatically apply."
+  - "&7 "
+  - "&7The enchantment &cOverload &7has a &eMAX LEVEL&7 of &cII&7."
+  - "&7 "
+  - "&4&l&m-=-&r &c&lPLANETARY ENCHANTMENT &4&l&m-=-&r"
+  - "&7 "
+  #
+  PotionEffect: "HEALTH_BOOST"
+  #
+  BookLevel1: "&c&lOverload I"
+  BookLevel2: "&c&lOverload II"
+  BookLevel3: "&c&lOverload III"
+  BookLevel4: "&c&lOverload IV"
+  BookLevel5: "&c&lOverload V"
+  #
+  EnchantedLoreLevel1: "&cOverload I"
+  EnchantedLoreLevel2: "&cOverload II"
+  EnchantedLoreLevel3: "&cOverload III"
+  EnchantedLoreLevel4: "&cOverload IV"
+  EnchantedLoreLevel5: "&cOverload V"
+#
+# End configuration for the sixth custom enchantment book.
+#
+# --------------------------------------------------------------------------------------
+
+# --------------------------------------------------------------------------------------
+#
+# Start configuration for the seventh custom enchantment book.
+# 
+ceBook7:
+  MaxLevel: 2
+  #
+  Enabled: true
+  #
+  SlotInGUI: 33
+  #
+  AlreadyEnchantedMessage: "&c&l&nERROR!&7 Your item already has the enchantment &c&lDRUNK&7."
+  #
+  CostXP: 50
+  #
+  ActiveItem: DIAMOND_CHESTPLATE
+  #
+  Name: "&c&lDrunk"
+  Lore:
+  - "&7 "
+  - "&f&l*** &6&lCOSTS 50 LEVELS &f&l***"
+  - "&7 "
+  - "&b&lDESCRIPTION &3»"
+  - "&cDrunk&7 will give you the strength potion effect, the level"
+  - "&7of strength will scale with the enchantment level. Being drunk"
+  - "&7is known to have to cause some strange side effects on the player..."
+  - "&7The enchantment &cDrunk&7 can be applied to chestplates."
+  - "&7 "
+  - "&7The enchantment &cDrunk &7has a &eMAX LEVEL&7 of &cII&7."
+  - "&7 "
+  - "&4&l&m-=-&r &c&lPLANETARY ENCHANTMENT &4&l&m-=-&r"
+  - "&7 "
+  #
+  BookLore:
+  - "&7 "
+  - "&cDrunk&7 will give you the strength potion effect, the level"
+  - "&7of strength will scale with the enchantment level. Being drunk"
+  - "&7is known to have to cause some strange side effects on the player..."
+  - "&7To enchant an item with &cDrunk&7, drag and drop this book"
+  - "&7onto &6CHESTPLATES&7, the enchantment will automatically apply."
+  - "&7 "
+  - "&7The enchantment &cDrunk &7has a &eMAX LEVEL&7 of &cII&7."
+  - "&7 "
+  - "&4&l&m-=-&r &c&lPLANETARY ENCHANTMENT &4&l&m-=-&r"
+  - "&7 "
+  #
+  PotionEffect1: "INCREASE_DAMAGE"
+  PotionEffect2: "WEAKNESS"
+  #
+  BookLevel1: "&c&lDrunk I"
+  BookLevel2: "&c&lDrunk II"
+  BookLevel3: "&c&lDrunk III"
+  BookLevel4: "&c&lDrunk IV"
+  BookLevel5: "&c&lDrunk V"
+  #
+  EnchantedLoreLevel1: "&cDrunk I"
+  EnchantedLoreLevel2: "&cDrunk II"
+  EnchantedLoreLevel3: "&cDrunk III"
+  EnchantedLoreLevel4: "&cDrunk IV"
+  EnchantedLoreLevel5: "&cDrunk V"
+#
+# End configuration for the seventh custom enchantment book.
+#
+# --------------------------------------------------------------------------------------
+
+# --------------------------------------------------------------------------------------
+#
+# Start configuration for the eighth custom enchantment book.
+# 
+ceBook8:
+  MaxLevel: 2
+  #
+  Enabled: true
+  #
+  SlotInGUI: 34
+  #
+  AlreadyEnchantedMessage: "&c&l&nERROR!&7 Your item already has the enchantment &e&lVALOR&7."
+  #
+  CostXP: 40
+  #
+  ActiveItem: DIAMOND_CHESTPLATE
+  #
+  Name: "&e&lValor"
+  Lore:
+  - "&7 "
+  - "&f&l*** &6&lCOSTS 40 LEVELS &f&l***"
+  - "&7 "
+  - "&b&lDESCRIPTION &3»"
+  - "&eValor&7 will give you the resistance potion effect, the"
+  - "&7level of resistance will scale with the enchantment level."
+  - "&7Valor is known the have side effects to the player..."
+  - "&7The enchantment &eValor&7 can be applied to chestplates."
+  - "&7 "
+  - "&7The enchantment &eValor&7 has a &eMAX LEVEL&7 of &eII&7."
+  - "&7 "
+  - "&6&l&m-=-&r &e&lMYTHIC ENCHANTMENT &6&l&m-=-&r"
+  - "&7 "
+  #
+  BookLore:
+  - "&7 "
+  - "&eValor&7 will give you the resistance potion effect, the"
+  - "&7level of resistance will scale with the enchantment level."
+  - "&7Valor is known the have side effects to the player..."
+  - "&7To enchant an item with &eValor&7, drag and drop this book"
+  - "&7onto &6CHESTPLATES&7, the enchantment will automatically apply."
+  - "&7 "
+  - "&7The enchantment &eValor &7has a &eMAX LEVEL&7 of &eII&7."
+  - "&7 "
+  - "&6&l&m-=-&r &e&lMYTHIC ENCHANTMENT &6&l&m-=-&r"
+  - "&7 "
+  #
+  PotionEffect1: "DAMAGE_RESISTANCE"
+  PotionEffect2: "SLOW_DIGGING"
+  #
+  BookLevel1: "&e&lValor I"
+  BookLevel2: "&e&lValor II"
+  BookLevel3: "&e&lValor III"
+  BookLevel4: "&e&lValor IV"
+  BookLevel5: "&e&lValor V"
+  #
+  EnchantedLoreLevel1: "&eValor I"
+  EnchantedLoreLevel2: "&eValor II"
+  EnchantedLoreLevel3: "&eValor III"
+  EnchantedLoreLevel4: "&eValor IV"
+  EnchantedLoreLevel5: "&eValor V"
+#
+# End configuration for the eighth custom enchantment book.
+#
+# --------------------------------------------------------------------------------------
+
+# --------------------------------------------------------------------------------------
+#
+# Start configuration for the ninth custom enchantment book.
+# 
+ceBook9:
+  MaxLevel: 1
+  #
+  Enabled: true
+  #
+  SlotInGUI: 35
+  #
+  AlreadyEnchantedMessage: "&c&l&nERROR!&7 Your item already has the enchantment &e&lCANTEEN&7."
+  #
+  CostXP: 40
+  #
+  ActiveItem: DIAMOND_HELMET
+  #
+  Name: "&e&lCanteen"
+  Lore:
+  - "&7 "
+  - "&f&l*** &6&lCOSTS 40 LEVELS &f&l***"
+  - "&7 "
+  - "&b&lDESCRIPTION &3»"
+  - "&eCanteen&7 will give you the saturation effect, this will provide"
+  - "&7you with a permanent &oand&7 portable food source."
+  - "&7The enchantment &eCanteen&7 can be applied to helmets."
+  - "&7 "
+  - "&7The enchantment &eCanteen &7has a &eMAX LEVEL&7 of &eI&7."
+  - "&7 "
+  - "&6&l&m-=-&r &e&lMYTHIC ENCHANTMENT &6&l&m-=-&r"
+  - "&7 "
+  #
+  BookLore:
+  - "&7 "
+  - "&eCanteen&7 will give you the saturation effect, this will provide"
+  - "&7you with a permanent &oand&7 portable food source."
+  - "&7To enchant an item with &eCanteen&7, drag and drop this book"
+  - "&7onto &6HELMETS&7, the enchantment will automatically apply."
+  - "&7 "
+  - "&7The enchantment &eCanteen &7has a &eMAX LEVEL&7 of &eI&7."
+  - "&7 "
+  - "&6&l&m-=-&r &e&lMYTHIC ENCHANTMENT &6&l&m-=-&r"
+  - "&7 "
+  #
+  PotionEffect: "SATURATION"
+  #
+  BookLevel1: "&e&lCanteen I"
+  BookLevel2: "&e&lCanteen II"
+  BookLevel3: "&e&lCanteen III"
+  BookLevel4: "&e&lCanteen IV"
+  BookLevel5: "&e&lCanteen V"
+  #
+  EnchantedLoreLevel1: "&eCanteen I"
+  EnchantedLoreLevel2: "&eCanteen II"
+  EnchantedLoreLevel3: "&eCanteen III"
+  EnchantedLoreLevel4: "&eCanteen IV"
+  EnchantedLoreLevel5: "&eCanteen V"
+#
+# End configuration for the ninth custom enchantment book.
+#
+# --------------------------------------------------------------------------------------
+
+# --------------------------------------------------------------------------------------
+#
+# Start configuration for the tenth custom enchantment book.
+# 
+ceBook10:
+  MaxLevel: 1
+  #
+  Enabled: true
+  #
+  SlotInGUI: 36
+  #
+  AlreadyEnchantedMessage: "&c&l&nERROR!&7 Your item already has the enchantment &a&lINSOMNIA&7."
+  #
+  CostXP: 30
+  #
+  ActiveItem: DIAMOND_HELMET
+  #
+  Name: "&a&lInsomnia"
+  Lore:
+  - "&7 "
+  - "&f&l*** &6&lCOSTS 30 LEVELS &f&l***"
+  - "&7 "
+  - "&b&lDESCRIPTION &3»"
+  - "&aInsomnia&7 will give you permanent night vision, so you"
+  - "&7will be able to see clearly no matter what time of day."
+  - "&7The enchantment &aInsomnia&7 can be applied to helmets."
+  - "&7 "
+  - "&7The enchantment &aInsomnia &7has a &eMAX LEVEL&7 of &aI&7."
+  - "&7 "
+  - "&2&l&m-=-&r &a&lSAGA ENCHANTMENT &2&l&m-=-&r"
+  - "&7 "
+  #
+  BookLore:
+  - "&7 "
+  - "&aInsomnia&7 will give you permanent night vision, so you"
+  - "&7will be able to see clearly no matter what time of day."
+  - "&7To enchant an item with &aInsomnia&7, drag and drop this book"
+  - "&7onto &6HELMETS&7, the enchantment will automatically apply."
+  - "&7 "
+  - "&7The enchantment &aInsomnia &7has a &eMAX LEVEL&7 of &aI&7."
+  - "&7 "
+  - "&2&l&m-=-&r &a&lSAGA ENCHANTMENT &2&l&m-=-&r"
+  - "&7 "
+  #
+  PotionEffect: "NIGHT_VISION"
+  #
+  BookLevel1: "&a&lInsomnia I"
+  BookLevel2: "&a&lInsomnia II"
+  BookLevel3: "&a&lInsomnia III"
+  BookLevel4: "&a&lInsomnia IV"
+  BookLevel5: "&a&lInsomnia V"
+  #
+  EnchantedLoreLevel1: "&aInsomnia I"
+  EnchantedLoreLevel2: "&aInsomnia II"
+  EnchantedLoreLevel3: "&aInsomnia III"
+  EnchantedLoreLevel4: "&aInsomnia IV"
+  EnchantedLoreLevel5: "&aInsomnia V"
+#
+# End configuration for the tenth custom enchantment book.
+#
+# --------------------------------------------------------------------------------------
+
+# --------------------------------------------------------------------------------------
+#
+# Start configuration for the eleventh custom enchantment book.
+# 
+ceBook11:
+  MaxLevel: 2
+  #
+  Enabled: true
+  #
+  SlotInGUI: 37
+  #
+  AlreadyEnchantedMessage: "&c&l&nERROR!&7 Your item already has the enchantment &e&lOVER CLOCK&7."
+  #
+  CostXP: 40
+  #
+  ActiveItem: DIAMOND_PICKAXE
+  #
+  Name: "&e&lOver Clock"
+  Lore:
+  - "&7 "
+  - "&f&l*** &6&lCOSTS 40 LEVELS &f&l***"
+  - "&7 "
+  - "&b&lDESCRIPTION &3»"
+  - "&eOver Clock&7 will give you the haste potio effect, this will"
+  - "&7increase your dig speed. The level of haste effect scales"
+  - "&7with the enchantment level, the maximum being haste 3."
+  - "&7The enchantment &eOver Clock&7 can be applied to pickaxes."
+  - "&7 "
+  - "&7The enchantment &eOver Clock &7has a &eMAX LEVEL&7 of &eIII&7."
+  - "&7 "
+  - "&6&l&m-=-&r &e&lMYTHIC ENCHANTMENT &6&l&m-=-&r"
+  - "&7 "
+  #
+  BookLore:
+  - "&7 "
+  - "&eOver Clock&7 will give you the haste potio effect, this will"
+  - "&7increase your dig speed. The level of haste effect scales"
+  - "&7with the enchantment level, the maximum being haste 3."
+  - "&7To enchant an item with &eOver Clock&7, drag and drop this book"
+  - "&7onto &6PICKAXES&7, the enchantment will automatically apply."
+  - "&7 "
+  - "&7The enchantment &eOver Clock &7has a &eMAX LEVEL&7 of &eIII&7."
+  - "&7 "
+  - "&6&l&m-=-&r &e&lMYTHIC ENCHANTMENT &6&l&m-=-&r"
+  - "&7 "
+  #
+  PotionEffect: "FAST_DIGGING"
+  #
+  BookLevel1: "&e&lOver Clock I"
+  BookLevel2: "&e&lOver Clock II"
+  BookLevel3: "&e&lOver Clock III"
+  BookLevel4: "&e&lOver Clock IV"
+  BookLevel5: "&e&lOver Clock V"
+  #
+  EnchantedLoreLevel1: "&eOver Clock I"
+  EnchantedLoreLevel2: "&eOver Clock II"
+  EnchantedLoreLevel3: "&eOver Clock III"
+  EnchantedLoreLevel4: "&eOver Clock IV"
+  EnchantedLoreLevel5: "&eOver Clock V"
+#
+# End configuration for the eleventh custom enchantment book.
+#
+# --------------------------------------------------------------------------------------
+
+# --------------------------------------------------------------------------------------
+#
+# Start configuration for the twelfth custom enchantment book.
+# 
+ceBook12:
+  MaxLevel: 1
+  #
+  Enabled: true
+  #
+  SlotInGUI: 38
+  #
+  AlreadyEnchantedMessage: "&c&l&nERROR!&7 Your item already has the enchantment &e&lFEATHER TOUCH&7."
+  #
+  CostXP: 40
+  #
+  ActiveItem: DIAMOND_PICKAXE
+  #
+  Name: "&e&lFeather Touch"
+  Lore:
+  - "&7 "
+  - "&f&l*** &6&lCOSTS 40 LEVELS &f&l***"
+  - "&7 "
+  - "&b&lDESCRIPTION &3»"
+  - "&eFeather Touch&7 gives you the ability to mine obsidian instantly."
+  - "&7Every level of the enchantment will have this effect."
+  - "&7The enchantment &eFeather Touch&7 can be applied to pickaxes."
+  - "&7 "
+  - "&7The enchantment &eFeather Touch &7has a &eMAX LEVEL&7 of &eI&7."
+  - "&7 "
+  - "&6&l&m-=-&r &e&lMYTHIC ENCHANTMENT &6&l&m-=-&r"
+  - "&7 "
+  #
+  BookLore:
+  - "&7 "
+  - "&eFeather Touch&7 gives you the ability to mine obsidian instantly."
+  - "&7Every level of the enchantment will have this effect."
+  - "&7To enchant an item with &eFeather Touch&7, drag and drop this"
+  - "&7book onto &6PICKAXES&7, the enchantment will automatically apply."
+  - "&7 "
+  - "&7The enchantment &eFeather Touch &7has a &eMAX LEVEL&7 of &eI&7."
+  - "&7 "
+  - "&6&l&m-=-&r &e&lMYTHIC ENCHANTMENT &6&l&m-=-&r"
+  - "&7 "
+  #
+  BookLevel1: "&e&lFeather Touch I"
+  BookLevel2: "&e&lFeather Touch II"
+  BookLevel3: "&e&lFeather Touch III"
+  BookLevel4: "&e&lFeather Touch IV"
+  BookLevel5: "&e&lFeather Touch V"
+  #
+  EnchantedLoreLevel1: "&eFeather Touch I"
+  EnchantedLoreLevel2: "&eFeather Touch II"
+  EnchantedLoreLevel3: "&eFeather Touch III"
+  EnchantedLoreLevel4: "&eFeather Touch IV"
+  EnchantedLoreLevel5: "&eFeather Touch V"
+#
+# End configuration for the twelfth custom enchantment book.
+#
+# --------------------------------------------------------------------------------------
+
+# --------------------------------------------------------------------------------------
+#
+# Start configuration for the 13th custom enchantment book.
+# 
+ceBook13:
+  MaxLevel: 5
+  #
+  Enabled: true
+  #
+  SlotInGUI: 39
+  #
+  AlreadyEnchantedMessage: "&c&l&nERROR!&7 Your item already has the enchantment &c&lVENOM&7."
+  #
+  CostXP: 50
+  #
+  ActiveItem: DIAMOND_SWORD
+  #
+  Chance: 8
+  PotionEffect: "POISON"
+  Duration: 80
+  #
+  MessageEnabled: true
+  EnchantProcMessage: "&f&l*** &c&lYOU HAVE BEEN POISONED BY &4&l%player% &f&l***"
+  #
+  HurtSound: BAT_HURT
+  HurtVolume: 1
+  HurtPitch: 1
+  #
+  GiverSound: DRINK
+  GiverVolume: 1
+  GiverPitch: 3
+  #
+  Name: "&c&lVenom"
+  Lore:
+  - "&7 "
+  - "&f&l*** &6&lCOSTS 50 LEVELS &f&l***"
+  - "&7 "
+  - "&b&lDESCRIPTION &3»"
+  - "&cVenom&7 gives you a chance to inflict your enemy with poison,"
+  - "&7the level of poison scales with the enchantment level."
+  - "&7The enchantment &cVenom&7 can be applied to swords."
+  - "&7 "
+  - "&7The enchantment &cVenom &7has a &eMAX LEVEL&7 of &cV&7."
+  - "&7 "
+  - "&4&l&m-=-&r &c&lPLANETARY ENCHANTMENT &4&l&m-=-&r"
+  - "&7 "
+  #
+  BookLore:
+  - "&7 "
+  - "&cVenom&7 gives you a chance to do special, poisonous attack."
+  - "&7The strength of the attack scales with the enchantment level."
+  - "&7To enchant an item with &cVenom&7, drag and drop this book"
+  - "&7onto &6SWORDS&7, the enchantment will automatically apply."
+  - "&7 "
+  - "&7The enchantment &cVenom &7has a &eMAX LEVEL&7 of &cV&7."
+  - "&7 "
+  - "&4&l&m-=-&r &c&lPLANETARY ENCHANTMENT &4&l&m-=-&r"
+  - "&7 "
+  #
+  BookLevel1: "&c&lVenom I"
+  BookLevel2: "&c&lVenom II"
+  BookLevel3: "&c&lVenom III"
+  BookLevel4: "&c&lVenom IV"
+  BookLevel5: "&c&lVenom V"
+  #
+  EnchantedLoreLevel1: "&cVenom I"
+  EnchantedLoreLevel2: "&cVenom II"
+  EnchantedLoreLevel3: "&cVenom III"
+  EnchantedLoreLevel4: "&cVenom IV"
+  EnchantedLoreLevel5: "&cVenom V"
+#
+# End configuration for the 13th custom enchantment book.
+#
+# --------------------------------------------------------------------------------------
+
+# --------------------------------------------------------------------------------------
+#
+# Start configuration for the 14th custom enchantment book.
+# 
+ceBook14:
+  MaxLevel: 5
+  #
+  Enabled: true
+  #
+  SlotInGUI: 40
+  #
+  AlreadyEnchantedMessage: "&c&l&nERROR!&7 Your item already has the enchantment &e&lINQUISITIVE&7."
+  #
+  CostXP: 40
+  #
+  ActiveItem: DIAMOND_SWORD
+  #
+  ProcSound: LEVEL_UP
+  ProcVolume: 1
+  ProcPitch: 3
+  #
+  ProcChanceLevel1: 6
+  ProcChanceLevel2: 5
+  ProcChanceLevel3: 4
+  ProcChanceLevel4: 3
+  ProcChanceLevel5: 2
+  #
+  Name: "&e&lInquisitive"
+  Lore:
+  - "&7 "
+  - "&f&l*** &6&lCOSTS 40 LEVELS &f&l***"
+  - "&7 "
+  - "&b&lDESCRIPTION &3»"
+  - "&eInquisitive&7 will give you a chance to double exp drops,"
+  - "&7from mobs. The chance of double exp drops will increase,"
+  - "&7with the enchantment level. The maximum double chance is 50%."
+  - "&7The enchantment &eInquisitive&7 can be applied to swords."
+  - "&7 "
+  - "&7The enchantment &eInquisitive &7has a &eMAX LEVEL&7 of &eV&7."
+  - "&7 "
+  - "&6&l&m-=-&r &e&lMYTHIC ENCHANTMENT &6&l&m-=-&r"
+  - "&7 "
+  #
+  BookLore:
+  - "&7 "
+  - "&eInquisitive&7 will give you a chance to double exp drops,"
+  - "&7from mobs. The chance of double exp drops will increase,"
+  - "&7with the enchantment level. The maximum double chance is 50%."
+  - "&7To enchant an item with &eInquisitive&7, drag and drop this"
+  - "&7book onto &6SWORDS&7, the enchantment will automatically apply."
+  - "&7 "
+  - "&7The enchantment &eInquisitive &7has a &eMAX LEVEL&7 of &eV&7."
+  - "&7 "
+  - "&6&l&m-=-&r &e&lMYTHIC ENCHANTMENT &6&l&m-=-&r"
+  - "&7 "
+  #
+  BookLevel1: "&e&lInquisitive I"
+  BookLevel2: "&e&lInquisitive II"
+  BookLevel3: "&e&lInquisitive III"
+  BookLevel4: "&e&lInquisitive IV"
+  BookLevel5: "&e&lInquisitive V"
+  #
+  EnchantedLoreLevel1: "&eInquisitive I"
+  EnchantedLoreLevel2: "&eInquisitive II"
+  EnchantedLoreLevel3: "&eInquisitive III"
+  EnchantedLoreLevel4: "&eInquisitive IV"
+  EnchantedLoreLevel5: "&eInquisitive V"
+#
+# End configuration for the 14th custom enchantment book.
+#
+# --------------------------------------------------------------------------------------
+
+# --------------------------------------------------------------------------------------
+#
+# Start configuration for the 15th custom enchantment book.
+# 
+ceBook15:
+  MaxLevel: 5
+  #
+  Enabled: true
+  #
+  SlotInGUI: 41
+  #
+  AlreadyEnchantedMessage: "&c&l&nERROR!&7 Your item already has the enchantment &e&lSEDATE&7."
+  #
+  CostXP: 40
+  #
+  ActiveItem: DIAMOND_SWORD
+  #
+  Chance: 8
+  PotionEffect: "SLOW_DIGGING"
+  Duration: 80
+  #
+  MessageEnabled: true
+  EnchantProcMessage: "&f&l*** &e&lYOU HAVE BEEN SEDATED BY &6&l%player% &f&l***"
+  #
+  HurtSound: SLIME_ATTACK
+  HurtVolume: 1
+  HurtPitch: 0
+  #
+  GiverSound: GHAST_DEATH
+  GiverVolume: 1
+  GiverPitch: 2
+  #
+  Name: "&e&lSedate"
+  Lore:
+  - "&7 "
+  - "&f&l*** &6&lCOSTS 40 LEVELS &f&l***"
+  - "&7 "
+  - "&b&lDESCRIPTION &3»"
+  - "&eSedate&7 will give you a chance to give your enemy the"
+  - "&7mining fatigue potion effect. The level of mining fatigue"
+  - "&7scales with the enchantment level, the chance is constant."
+  - "&7The enchantment &eSedate&7 can be applied to swords."
+  - "&7 "
+  - "&7The enchantment &eSedate &7has a &eMAX LEVEL&7 of &eV&7."
+  - "&7 "
+  - "&6&l&m-=-&r &e&lMYTHIC ENCHANTMENT &6&l&m-=-&r"
+  - "&7 "
+  #
+  BookLore:
+  - "&7 "
+  - "&eSedate&7 will give you a chance to give your enemy the"
+  - "&7mining fatigue potion effect. The level of mining fatigue"
+  - "&7scales with the enchantment level, the chance is constant."
+  - "&7To enchant an item with &eSedate&7, drag and drop this"
+  - "&7book onto &6SWORDS&7, the enchantment will automatically apply."
+  - "&7 "
+  - "&7The enchantment &eSedate &7has a &eMAX LEVEL&7 of &eV&7."
+  - "&7 "
+  - "&6&l&m-=-&r &e&lMYTHIC ENCHANTMENT &6&l&m-=-&r"
+  - "&7 "
+  #
+  BookLevel1: "&e&lSedate I"
+  BookLevel2: "&e&lSedate II"
+  BookLevel3: "&e&lSedate III"
+  BookLevel4: "&e&lSedate IV"
+  BookLevel5: "&e&lSedate V"
+  #
+  EnchantedLoreLevel1: "&eSedate I"
+  EnchantedLoreLevel2: "&eSedate II"
+  EnchantedLoreLevel3: "&eSedate III"
+  EnchantedLoreLevel4: "&eSedate IV"
+  EnchantedLoreLevel5: "&eSedate V"
+#
+# End configuration for the 15th custom enchantment book.
+#
+# --------------------------------------------------------------------------------------
+
+
+# --------------------------------------------------------------------------------------
+#
+# Start configuration for the 16th custom enchantment book.
+# 
+ceBook16:
+  MaxLevel: 5
+  #
+  Enabled: true
+  #
+  SlotInGUI: 42
+  #
+  AlreadyEnchantedMessage: "&c&l&nERROR!&7 Your item already has the enchantment &a&lDecapitation&7."
+  #
+  CostXP: 30
+  #
+  ActiveItem: DIAMOND_AXE
+  #
+  HeadName: "&5&l%player%'s Cranium"
+  HeadLore:
+  - "&7 "
+  - "&bDecapitated By &f&l%killer%"
+  - "&7 "
+  #
+  MessageEnabled: true
+  DecapitateBroadcast: "&f&l*** &5&l%player%&7 was &c&l&nDECAPITATED&7 by &b&l%killer% &f&l***"
+  #
+  DecapitateSound: ENDERDRAGON_GROWL
+  DecapitateVolume: 1
+  DecapitatePitch: 0
+  #
+  HeadChanceLevel1: 6
+  HeadChanceLevel2: 5
+  HeadChanceLevel3: 4
+  HeadChanceLevel4: 3
+  HeadChanceLevel5: 2
+  #
+  Name: "&a&lDecapitation"
+  Lore:
+  - "&7 "
+  - "&f&l*** &6&lCOSTS 30 LEVELS &f&l***"
+  - "&7 "
+  - "&b&lDESCRIPTION &3»"
+  - "&aDecapitation&7 gives you a chance to behead your enemy"
+  - "&7during pvp battles. This will &nbroadcast&7 a message to all"
+  - "&7online players saying that you beheaded your enemy. The"
+  - "&7chance of head drops increases with the enchantment level."
+  - "&7The enchantment &aDecapitation&7 can be applied to axes."
+  - "&7 "
+  - "&7The enchantment &aDecapitation &7has a &eMAX LEVEL&7 of &aV&7."
+  - "&7 "
+  - "&2&l&m-=-&r &a&lSAGA ENCHANTMENT &2&l&m-=-&r"
+  - "&7 "
+  #
+  BookLore:
+  - "&7 "
+  - "&aDecapitation&7 gives you a chance to behead your enemy"
+  - "&7during pvp battles. This will &nbroadcast&7 a message to all"
+  - "&7online players saying that you beheaded your enemy. The"
+  - "&7chance of head drops increases with the enchantment level."
+  - "&7To enchant an item with &aDecapitation&7, drag and drop this"
+  - "&7book onto &6AXES&7, the enchantment will automatically apply."
+  - "&7 "
+  - "&7The enchantment &aDecapitation &7has a &eMAX LEVEL&7 of &aV&7."
+  - "&7 "
+  - "&2&l&m-=-&r &a&lSAGA ENCHANTMENT &2&l&m-=-&r"
+  - "&7 "
+  #
+  BookLevel1: "&a&lDecapitation I"
+  BookLevel2: "&a&lDecapitation II"
+  BookLevel3: "&a&lDecapitation III"
+  BookLevel4: "&a&lDecapitation IV"
+  BookLevel5: "&a&lDecapitation V"
+  #
+  EnchantedLoreLevel1: "&aDecapitation I"
+  EnchantedLoreLevel2: "&aDecapitation II"
+  EnchantedLoreLevel3: "&aDecapitation III"
+  EnchantedLoreLevel4: "&aDecapitation IV"
+  EnchantedLoreLevel5: "&aDecapitation V"
+#
+# End configuration for the 16th custom enchantment book.
+#
+# --------------------------------------------------------------------------------------
+
+# --------------------------------------------------------------------------------------
+#
+# Start configuration for the 17th custom enchantment book.
+# 
+ceBook17:
+  MaxLevel: 5
+  #
+  Enabled: true
+  #
+  SlotInGUI: 43
+  #
+  AlreadyEnchantedMessage: "&c&l&nERROR!&7 Your item already has the enchantment &e&lSHACKLES&7."
+  #
+  CostXP: 40
+  #
+  ActiveItem: DIAMOND_AXE
+  #
+  Chance: 8
+  PotionEffect: "SLOW"
+  Duration: 80
+  #
+  MessageEnabled: true
+  EnchantProcMessage: "&f&l*** &e&lYOU HAVE BEEN SLOWED BY &6&l%player% &f&l***"
+  #
+  HurtSound: BLAZE_DEATH
+  HurtVolume: 1
+  HurtPitch: 1
+  #
+  GiverSound: CAT_HISS
+  GiverVolume: 1
+  GiverPitch: 2
+  #
+  Name: "&e&lShackles"
+  Lore:
+  - "&7 "
+  - "&f&l*** &6&lCOSTS 40 LEVELS &f&l***"
+  - "&7 "
+  - "&b&lDESCRIPTION &3»"
+  - "&eShackles&7 will give you a chance to give your enemy the"
+  - "&7slowness potion effect. The level of slowness given"
+  - "&7scales with the enchantment level, the chance is constant."
+  - "&7The enchantment &eShackles&7 can be applied to axes."
+  - "&7 "
+  - "&7The enchantment &eShackles &7has a &eMAX LEVEL&7 of &eV&7."
+  - "&7 "
+  - "&6&l&m-=-&r &e&lMYTHIC ENCHANTMENT &6&l&m-=-&r"
+  - "&7 "
+  #
+  BookLore:
+  - "&7 "
+  - "&eShackles&7 will give you a chance to give your enemy the"
+  - "&7slowness potion effect. The level of slowness given"
+  - "&7scales with the enchantment level, the chance is constant."
+  - "&7To enchant an item with &eSedate&7, drag and drop this"
+  - "&7book onto &6AXES&7, the enchantment will automatically apply."
+  - "&7 "
+  - "&7The enchantment &eShackles &7has a &eMAX LEVEL&7 of &eV&7."
+  - "&7 "
+  - "&6&l&m-=-&r &e&lMYTHIC ENCHANTMENT &6&l&m-=-&r"
+  - "&7 "
+  #
+  BookLevel1: "&e&lShackles I"
+  BookLevel2: "&e&lShackles II"
+  BookLevel3: "&e&lShackles III"
+  BookLevel4: "&e&lShackles IV"
+  BookLevel5: "&e&lShackles V"
+  #
+  EnchantedLoreLevel1: "&eShackles I"
+  EnchantedLoreLevel2: "&eShackles II"
+  EnchantedLoreLevel3: "&eShackles III"
+  EnchantedLoreLevel4: "&eShackles IV"
+  EnchantedLoreLevel5: "&eShackles V"
+#
+# End configuration for the 17th custom enchantment book.
+#
+# --------------------------------------------------------------------------------------
+
+# --------------------------------------------------------------------------------------
+#
+# Start configuration for the 18th custom enchantment book.
+# 
+ceBook18:
+  MaxLevel: 5
+  #
+  Enabled: true
+  #
+  SlotInGUI: 44
+  #
+  AlreadyEnchantedMessage: "&c&l&nERROR!&7 Your item already has the enchantment &c&lWITHER&7."
+  #
+  CostXP: 50
+  #
+  ActiveItem: DIAMOND_AXE
+  #
+  Chance: 8
+  PotionEffect: "WITHER"
+  Duration: 80
+  #
+  MessageEnabled: true
+  EnchantProcMessage: "&f&l*** &c&lYOU HAVE BEEN WITHERED BY &4&l%player% &f&l***"
+  #
+  HurtSound: WITHER_HURT
+  HurtVolume: 1
+  HurtPitch: 2
+  #
+  GiverSound: GHAST_SCREAM2
+  GiverVolume: 1
+  GiverPitch: 2
+  #
+  Name: "&c&lWither"
+  Lore:
+  - "&7 "
+  - "&f&l*** &6&lCOSTS 50 LEVELS &f&l***"
+  - "&7 "
+  - "&b&lDESCRIPTION &3»"
+  - "&cWither&7 gives you a chance to inflict your enemy with the"
+  - "&7wither potion effect,the level of poison scales with the"
+  - "&7enchantment level. The chance for this attack is constant."
+  - "&7The enchantment &cWither&7 can be applied to axes."
+  - "&7 "
+  - "&7The enchantment &cWither &7has a &eMAX LEVEL&7 of &cV&7."
+  - "&7 "
+  - "&4&l&m-=-&r &c&lPLANETARY ENCHANTMENT &4&l&m-=-&r"
+  - "&7 "
+  #
+  BookLore:
+  - "&7 "
+  - "&cWither&7 gives you a chance to inflict your enemy with the"
+  - "&7wither potion effect,the level of poison scales with the"
+  - "&7enchantment level. The chance for this attack is constant."
+  - "&7To enchant an item with &cWither&7, drag and drop this book"
+  - "&7onto &6AXES&7, the enchantment will automatically apply."
+  - "&7 "
+  - "&7The enchantment &cWither &7has a &eMAX LEVEL&7 of &cV&7."
+  - "&7 "
+  - "&4&l&m-=-&r &c&lPLANETARY ENCHANTMENT &4&l&m-=-&r"
+  - "&7 "
+  #
+  BookLevel1: "&c&lWither I"
+  BookLevel2: "&c&lWither II"
+  BookLevel3: "&c&lWither III"
+  BookLevel4: "&c&lWither IV"
+  BookLevel5: "&c&lWither V"
+  #
+  EnchantedLoreLevel1: "&cWither I"
+  EnchantedLoreLevel2: "&cWither II"
+  EnchantedLoreLevel3: "&cWither III"
+  EnchantedLoreLevel4: "&cWither IV"
+  EnchantedLoreLevel5: "&cWither V"
+#
+# End configuration for the 18th custom enchantment book.
+#
+# --------------------------------------------------------------------------------------
+
+# --------------------------------------------------------------------------------------
+#
+# Start configuration for the 19th custom enchantment book.
+# 
+ceBook19:
+  MaxLevel: 5
+  #
+  Enabled: true
+  #
+  SlotInGUI: 45
+  #
+  AlreadyEnchantedMessage: "&c&l&nERROR!&7 Your item already has the enchantment &c&lLIFESTEAL&7."
+  #
+  CostXP: 50
+  #
+  ActiveItem: DIAMOND_SWORD
+  #
+  Chance: 10
+  BaseHPStolen: 1
+  #
+  MessageEnabled: true
+  EnchantProcMessage: "&f&l*** &c&lYOU HAD LIFE STOLEN BY &4&l%player% &f&l***"
+  #
+  HurtSound: BLAZE_DEATH
+  HurtVolume: 1
+  HurtPitch: 1
+  #
+  GiverSound: GHAST_SCREAM
+  GiverVolume: 1
+  GiverPitch: 1
+  #
+  Name: "&c&lLife Steal"
+  Lore:
+  - "&7 "
+  - "&f&l*** &6&lCOSTS 50 LEVELS &f&l***"
+  - "&7 "
+  - "&b&lDESCRIPTION &3»"
+  - "&cLifesteal&7 gives you a chance to steal your enemys HP,"
+  - "&7you will gain the amount of HP that your stole from your"
+  - "&7enemy. The amount of HP stolen increase with enchant level."
+  - "&7The enchantment &cLifesteal&7 can be applied to swords."
+  - "&7 "
+  - "&7The enchantment &cLifesteal &7has a &eMAX LEVEL&7 of &cV&7."
+  - "&7 "
+  - "&4&l&m-=-&r &c&lPLANETARY ENCHANTMENT &4&l&m-=-&r"
+  - "&7 "
+  #
+  BookLore:
+  - "&7 "
+  - "&cLifesteal&7 gives you a chance to steal your enemys HP,"
+  - "&7you will gain the amount of HP that your stole from your"
+  - "&7enemy. The amount of HP stolen increase with enchant level."
+  - "&7To enchant an item with &cLifesteal&7, drag and drop this book"
+  - "&7onto &6SWORDSS&7, the enchantment will automatically apply."
+  - "&7 "
+  - "&7The enchantment &cLifesteal &7has a &eMAX LEVEL&7 of &cV&7."
+  - "&7 "
+  - "&4&l&m-=-&r &c&lPLANETARY ENCHANTMENT &4&l&m-=-&r"
+  - "&7 "
+  #
+  BookLevel1: "&c&lLifesteal I"
+  BookLevel2: "&c&lLifesteal II"
+  BookLevel3: "&c&lLifesteal III"
+  BookLevel4: "&c&lLifesteal IV"
+  BookLevel5: "&c&lLifesteal V"
+  #
+  EnchantedLoreLevel1: "&cLifesteal I"
+  EnchantedLoreLevel2: "&cLifesteal II"
+  EnchantedLoreLevel3: "&cLifesteal III"
+  EnchantedLoreLevel4: "&cLifesteal IV"
+  EnchantedLoreLevel5: "&cLifesteal V"
+#
+# End configuration for the 19th custom enchantment book.
+#
+# --------------------------------------------------------------------------------------
+
+# --------------------------------------------------------------------------------------
+#
+# Start configuration for the 20th custom enchantment book.
+# 
+ceBook20:
+  MaxLevel: 5
+  #
+  Enabled: true
+  #
+  SlotInGUI: 46
+  #
+  AlreadyEnchantedMessage: "&c&l&nERROR!&7 Your item already has the enchantment &2&lFORGE&7."
+  #
+  CostXP: 60
+  #
+  ChanceLevel1: 250
+  ChanceLevel2: 200
+  ChanceLevel3: 150
+  ChanceLevel4: 100
+  ChanceLevel5: 50 
+  DurabilityPerProc: 1
+  #
+  Name: "&2&lForge"
+  Lore:
+  - "&7 "
+  - "&f&l*** &6&lCOSTS 60 LEVELS &f&l***"
+  - "&7 "
+  - "&b&lDESCRIPTION &3»"
+  - "&2Forge&7 will gradually repair the armor piece it is applied"
+  - "&7to overtime. The proc chance scales with the enchantment level."
+  - "&7The enchantment &2Forge&7 can be applied to all armor pieces."
+  - "&7 "
+  - "&7The enchantment &2Forge &7has a &eMAX LEVEL&7 of &2V&7."
+  - "&7 "
+  - "&a&l&m-=-&r &2&lLUNAR ENCHANTMENT &a&l&m-=-&r"
+  - "&7 "
+  #
+  BookLore:
+  - "&7 "
+  - "&2Forge&7 will gradually repair the armor piece it is applied"
+  - "&7to overtime. The proc chance scales with the enchantment level."
+  - "&7To enchant an item with &2Froge&7, drag and drop this book"
+  - "&7onto &6ARMOR&7, the enchantment will automatically apply."
+  - "&7 "
+  - "&7The enchantment &2Forge &7has a &eMAX LEVEL&7 of &2V&7."
+  - "&7 "
+  - "&a&l&m-=-&r &2&lLUNAR ENCHANTMENT &a&l&m-=-&r"
+  - "&7 "
+  #
+  BookLevel1: "&2&lForge I"
+  BookLevel2: "&2&lForge II"
+  BookLevel3: "&2&lForge III"
+  BookLevel4: "&2&lForge IV"
+  BookLevel5: "&2&lForge V"
+  #
+  EnchantedLoreLevel1: "&2Forge I"
+  EnchantedLoreLevel2: "&2Forge II"
+  EnchantedLoreLevel3: "&2Forge III"
+  EnchantedLoreLevel4: "&2Forge IV"
+  EnchantedLoreLevel5: "&2Forge V"
+#
+# End configuration for the 20th custom enchantment book.
+#
+# --------------------------------------------------------------------------------------
+
+# --------------------------------------------------------------------------------------
+#
+# Start configuration for the 21st custom enchantment book.
+# 
+ceBook21:
+  MaxLevel: 5
+  #
+  Enabled: true
+  #
+  SlotInGUI: 47
+  #
+  AlreadyEnchantedMessage: "&c&l&nERROR!&7 Your item already has the enchantment &b&lBLOODLUST&7."
+  #
+  CostXP: 60
+  #
+  ActiveItem: DIAMOND_SWORD
+  #
+  ProcEffectsDistance: 32
+  ProcMessage: "&f&l*** &6&l%killer% &b&lIS LUSTING FOR BLOOD AND HAS RECIEVED &c&l&nSTRENGTH&r &f&l***"
+  #
+  ProcSound: ENDERDRAGON_GROWL
+  ProcVolume: 1
+  ProcPitch: 1
+  #
+  PotionEffect: "INCREASE_DAMAGE"
+  EffectDuration: 300
+  #
+  ProcChanceLevel1: 2
+  ProcChanceLevel2: 4
+  ProcChanceLevel3: 3
+  ProcChanceLevel4: 2
+  ProcChanceLevel5: 1
+  #
+  Name: "&b&lBloodlust"
+  Lore:
+  - "&7 "
+  - "&f&l*** &6&lCOSTS 60 LEVELS &f&l***"
+  - "&7 "
+  - "&a&lDESCRIPTION &2»"
+  - "&bBloodlust&7 gives you a chance to receive strength after killing"
+  - "&7a player. A message and sound is broadcast to nearby players"
+  - "&7to &c&LALERT&7 them that your bloodlust effects are active."
+  - "&7The enchantment &bBloodlust&7 can be applied to swords and axes."
+  - "&7 "
+  - "&7The enchantment &bBloodlust &7has a &eMAX LEVEL&7 of &bV&7."
+  - "&7 "
+  - "&3&l&m-=-&r &b&lLUNAR ENCHANTMENT &3&l&m-=-&r"
+  - "&7 "
+  #
+  BookLore:
+  - "&7 "
+  - "&bBloodlust&7 gives you a chance to receive strength after killing"
+  - "&7a player. A message and sound is broadcast to nearby players"
+  - "&7to &c&LALERT&7 them that your bloodlust effects are active."
+  - "&7To enchant an item with &bBloodlust&7, drag and drop this book"
+  - "&7onto &6WEAPONS&7, the enchantment will automatically apply."
+  - "&7 "
+  - "&7The enchantment &bBloodlust &7has a &eMAX LEVEL&7 of &bV&7."
+  - "&7 "
+  - "&3&l&m-=-&r &b&lLUNAR ENCHANTMENT &3&l&m-=-&r"
+  - "&7 "
+  #
+  BookLevel1: "&b&lBloodlust I"
+  BookLevel2: "&b&lBloodlust II"
+  BookLevel3: "&b&lBloodlust III"
+  BookLevel4: "&b&lBloodlust IV"
+  BookLevel5: "&b&lBloodlust V"
+  #
+  EnchantedLoreLevel1: "&bBloodlust I"
+  EnchantedLoreLevel2: "&bBloodlust II"
+  EnchantedLoreLevel3: "&bBloodlust III"
+  EnchantedLoreLevel4: "&bBloodlust IV"
+  EnchantedLoreLevel5: "&bBloodlust V"
+#
+# End configuration for the 21st custom enchantment book.
+#
+# --------------------------------------------------------------------------------------

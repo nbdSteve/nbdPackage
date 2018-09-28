@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="C:/Users/deeb0/Desktop/minecraft/1.13 plugins/spigot files/spigot1.13.jar"/>
+	<classpathentry kind="lib" path="C:/Users/deeb0/Desktop/minecraft/1.13 plugins/spigot files/spigot-api-latest-shaded.jar"/>
+	<classpathentry kind="lib" path="C:/Users/deeb0/Desktop/minecraft/personal plugins/spigot files/FactionsUUID.jar"/>
+	<classpathentry kind="lib" path="C:/Users/deeb0/Desktop/minecraft/personal plugins/spigot files/Vault.jar"/>
+	<classpathentry kind="lib" path="C:/Users/deeb0/Desktop/minecraft/personal plugins/spigot files/worldedit.jar"/>
+	<classpathentry kind="lib" path="C:/Users/deeb0/Desktop/minecraft/personal plugins/spigot files/worldguard.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

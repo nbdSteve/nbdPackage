@@ -1,0 +1,65 @@
+FundGoal: "50000000"
+Funded: false
+CurrentFund: "0"
+MinimumFundAmount: "10000"
+FundedMessage: "&a&l&nALERT!&7 The server has been fully funded, books and armor can now be purchased from /ce"
+AlreadyFundedMessage: "&f&lFUND &b> &7the server has fund of &a$%totalFund%&7 already been funded!"
+FundUpdatedMessage: "&f&lFUND &b> &7you have &a&l&nSUCCESSFULLY&7 updated the server funding goal."
+FundAddedMessage: "&f&lFUND &b> &7you added &a$%fundAdded%&7 to the server fund."
+FundTooSmallMessage: "&c&l&nERROR!&7 the minium fund amount is &a$%minFund%"
+FundCompleteMessage: "&c&l&nERROR!&7 your donation is too generous! please donate &a$%remainingAmount%&7 to complete the server fund."
+InvalidCommandMessage: "&c&l&nERROR!&7 unknown command, try &f/fund help"
+NotFundedMessage: "&c&l&nERROR!&7 You can not purchase that yet because the server hasn't been funded! &f/fund add <amount>"
+FundHelp:
+  Message:
+  - "&7 "
+  - "&f&lFUND &b>"
+  - "&3/fund"
+  - "&7See the current amount funded, percentage funded, and the total fund."
+  - "&7 "
+  - "&3/fund add <amount>"
+  - "&7Add to the server fund, <amount> must be a number."
+  - "&7 "
+  - "&3/fund whatis"
+  - "&7See more information about what the server fund is."
+  - "&7 "
+FundCommand:
+  FundMessage:
+  - "&7 "
+  - "&3>>> &f&lCURRENT FUNDING &3<<<"
+  - "&7 "
+  - "&6&lCURRENT: &e&l$%currentFund%"
+  - "&3&lPERCENT FUNDED: &b&l%fundPercent%%"
+  - "&2&lTOTAL FUND: &a&l$%totalFund%"
+  - "&7 "
+  FundWhatis:
+  - "&7 "
+  - "&f&lSERVER FUND &b>"
+  - "&7The server fund is used to lock items like: &ecustom enchantments&7, and &ecustom armor&7. The reason why these items are locked is so that the community has to work together to unlock them."
+  - "&7This is the purpose of the &bserver fund&7, if you want to check the current status of the fund try &f/fund&7."
+  - "&7 "
+NotFundedGUI:
+  Item: "CHEST"
+  ItemData: 0
+  Enchanted: true
+  Name: "&6&m----=&c&l>>> &f&l??? &c&l<<<&6&m=----&r"
+  Lore:
+  - "&7 "
+  - "&7&m----------------------------------------------"
+  - "&7All &ecustom enchantments &7and &ecustom armor items"
+  - "&7are currently &c&l&nLOCKED&7 and cannot be purchased."
+  - "&7&m----------------------------------------------"
+  - "&7 "
+  - "&7The server must be &b100% &7funded to &a&lUNLOCK&7 the ability"
+  - "&7to &epurchase&7 and &euse&7 these items, avaliable in this GUI."
+  - "&7 "
+  - "&f&lCURRENT FUND &b> &6&l$%currentFund%&7 - &b&l%percentFunded%%&7 funded."
+  - "&7 "
+  - "&7Contribute to the server fund using &f/fund add <amount>"
+  - "&7 "
+CloseGUISound: "VILLAGER_HAGGLE"
+CloseGUIVolume: 1
+CloseGUIPitch: 0
+FundedSound: "ENDERDRAGON_GROWL"
+FundedVolume: 1
+FundedPitch: 2

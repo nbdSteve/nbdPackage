@@ -1,0 +1,22 @@
+name: nbdPackage
+author: nbdSteve
+version: 1.0
+main: com.nbdSteve.nbdPackage.Main
+commands:
+  ce:
+    usage: /<command>
+    description: open up the enchanter GUI for nbdPackage.
+  ca:
+    usage: /<command>
+    description: open up the enchanter GUI for nbdPackage.
+  enchanter:
+    usage: /<command>
+    description: open up the enchanter GUI for nbdPackage.
+  customenchant:
+    usage: /<command>
+    description: open up the enchanter GUI for nbdPackage.
+  givenbd:
+    usage: /<command>
+    description: admin command to give books & armor.
+  fund:
+    usage: /<command>
